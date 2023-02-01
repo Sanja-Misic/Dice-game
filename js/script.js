@@ -46,12 +46,22 @@ startbtn.addEventListener('click', function() {
         el1.style.display = "none"
         el3.style.display = "flex" //treba da bude 2 pa brojac da ga prebaci na 3
 
-    } else
+    } else {
+
         playerNamesNotEnter.textContent ="You didn't enter players names!"
         playerNamesNotEnter.style.color = "#d84a5d"
         console.log("You didn't enter player name.")    
-})
+    }
 
+    //clean placeholder
+    if (enterPlayerName1.value !="") {
+        enterPlayerName1.value = ""
+    }
+        
+    if (enterPlayerName2.value !="") {
+        enterPlayerName2.value = ""
+    }
+})
 
 
 
