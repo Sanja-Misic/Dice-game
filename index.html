@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice game</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <section class="element1 container">
+             <h1 class="element1-h1">Dice game</h1>
+             <h1 class="element1-h2">Enter players names: </h1>
+                <div class="players-names">
+                    <input class="enter-player-name" id="player-1-name" type="text" placeholder="Player 1">
+                    <input class="enter-player-name" id="player-2-name" type="text" placeholder="Player 2">
+                </div>
+                <button class="btn start-btn">Start</button>
+        </section>
+
+        <!-- <section class="element2">
+            <div>3.2.1...</div>
+        </section> -->
+
+        <section class="element3 container">
+            <div class="player player1">
+                <p class="player-name player1-name">Player 1</p>
+                <div class="player-dice player1-dice">
+                    <img class="player-img player1-img" src="./img/dice-1.png" alt="dice">
+                </div>
+                <p class="player-score">Score: <span class="player1-score-num">0</span></p>
+                <p class="player-current-score">Current score: <span class="player1-current-score-num">0</span></p>
+            </div>
+            <div class="player player2">
+                <p class="player-name player2-name">Player 2</p>
+                <div class="player-dice player2-dice">
+                    <img class="player-img player2-img" src="./img/dice-1.png" alt="dice">
+                </div>
+                <p class="player-score">Score: <span class="player2-score-num">0</span></p>
+                <p class="player-current-score">Current score: <span class="player2-current-score-num">0</span></p>
+            </div>
+
+            <button class="btn roll">Roll</button>
+            <button class="btn store">Store</button>
+            <div class="player-icon"><img src="./img/play-button-arrowhead.png" alt=""></div>
+        </section>
+
+        <section class="element4 ">
+            <p class="winner"> Player <span class="winner-name">Player 1 </span>  win! </p>
+            <button class="btn start-again">Start again</button>
+        </section>
+    </main>
+    
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

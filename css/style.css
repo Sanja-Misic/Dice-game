@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 2.6rem;
+  width: 100%;
+  background-color: #e99869;
+}
+
+.container {
+  max-width: 120rem;
+  width: 100%;
+  margin: 10rem auto;
+  min-height: calc(100vh - 20rem);
+}
+
+.btn {
+  border: none;
+  font-size: 3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.element1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.element1-h1 {
+  margin-bottom: 8rem;
+  text-transform: uppercase;
+  font-size: 6rem;
+  background-color: #a596cb;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+.element1-h2 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+}
+.element1 .players-names {
+  margin-bottom: 5rem;
+}
+.element1 .enter-player-name {
+  height: 5rem;
+  width: 30rem;
+  border: 5px solid #383a72;
+  color: #383a72;
+  border-radius: 1rem;
+  font-size: 3rem;
+}
+.element1 .enter-player-name:first-child {
+  margin-right: 4rem;
+}
+.element1 .enter-player-name::-moz-placeholder {
+  font-size: 2.4rem;
+  padding-left: 1.8rem;
+  letter-spacing: 4px;
+}
+.element1 .enter-player-name:-ms-input-placeholder {
+  font-size: 2.4rem;
+  padding-left: 1.8rem;
+  letter-spacing: 4px;
+}
+.element1 .enter-player-name::placeholder {
+  font-size: 2.4rem;
+  padding-left: 1.8rem;
+  letter-spacing: 4px;
+}
+.element1 .start-btn {
+  padding: 1rem 2rem;
+  background-color: #383a72;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.element3 {
+  position: relative;
+  display: flex;
+  border-radius: 3rem;
+}
+.element3 .roll {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 3.4rem;
+  background-color: #383a72;
+  color: #fff;
+  border-radius: 1rem;
+}
+.element3 .store {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.4rem;
+  padding: 0.8rem 2rem;
+  background-color: #a596cb;
+  color: #fff;
+  border-radius: 1rem;
+}
+.element3 .player-icon {
+  position: absolute;
+  top: 4rem;
+  left: 35%;
+}
+.element3 .player {
+  width: 50%;
+  text-align: center;
+  background-color: aqua;
+  border: 2px solid #ef7c5e;
+  border-radius: 1rem;
+}
+.element3 .player-name {
+  font-size: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 12rem;
+}
+.element3 .player-dice {
+  margin-bottom: 20rem;
+}
+.element3 .player-img {
+  width: 10rem;
+}
+.element3 .player-score {
+  margin-bottom: 1rem;
+}
+.element3 .player-current-score {
+  font-weight: bold;
+}
+.element3 .player1 {
+  background-color: #fff;
+}
+.element3 .player2 {
+  background-color: #ef7c5e;
+}
+
+.element4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #d84a5d;
+  height: 100vh;
+}
+.element4 .winner {
+  font-size: 8rem;
+  margin: 10rem 0;
+}
+.element4 .start-again {
+  padding: 1rem 2rem;
+  background-color: #e99869;
+  border-radius: 1rem;
+}/*# sourceMappingURL=style.css.map */
