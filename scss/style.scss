@@ -3,7 +3,12 @@ $color-orange-dark:#ef7c5e;
 $color-orange-light: #e99869;
 $color-red: #d84a5d;
 $color-purple-light:#a596cb;
+$color-purple-light2:#8d80ad;
 $color-purple-dark:#383a72;
+$color-purple-dark2:#46498e;
+$color-white: #fff;
+$color-shadow: rgba(0, 0, 0, 0.447);
+// $color-grey-light: #dcbca55c;
 
 //General
 * {
@@ -21,7 +26,9 @@ body{
     font-family: sans-serif;
     font-size: 2.6rem;
     width: 100%;
-    background-color: $color-orange-light
+    background-color: $color-orange-light;
+    position: relative;
+    // z-index: -2;
 }
 
 .container {
@@ -29,6 +36,7 @@ body{
     width: 100%;
     margin: 10rem auto; 
     min-height: calc(100vh - 20rem);
+    box-shadow: 0px 5px 10px $color-shadow;
 }
 
 .btn{
@@ -37,6 +45,87 @@ body{
     text-transform: uppercase;
     cursor: pointer;
 
+}
+//decoration
+.decoration{
+
+}
+.img{
+    width: 20rem;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0px 5px 10px $color-shadow;
+
+    &-1{
+        top: -10%;
+        left: 20%;   
+        rotate: 50deg;    
+    }
+    &-2{
+        top: 20%;
+        left: 80%;
+        rotate: 50deg; 
+    }
+    &-3{
+        top: 30%;
+        left: 10%;
+        rotate: 120deg; 
+    }
+    &-4{
+        top: 90%;
+        left: 20%;
+    }
+    &-5{
+        top: -20%;
+        left: 60%;       
+    }
+    &-6{
+        top: 80%;
+        left: 0;
+        rotate: 100deg;
+    }
+    &-7{
+        top: 85%;
+        left: 80%;
+        rotate: 60deg;
+    }
+    &-8{
+        top: -10%;
+        left: 0%;
+        rotate: 160deg;
+    }
+    &-9{
+        top: -18%;
+        left: 90%;
+        rotate: 140deg;
+    }
+    &-10{
+        top: 7%;
+        left: 5%;
+    }
+    &-11{
+        top:42%;
+        left: 89%;
+    }
+    &-12{
+        top: 90%;
+        left: 87%;
+    }
+    &-13{
+        top: -25%;
+        left: 38%;
+        rotate: 40deg;
+    }
+    &-14{
+        top: 100%;
+        left: 50%;
+        rotate: 40deg;
+
+    }
+    &-15{
+        top: 50%;
+        left: 90%;
+    }
 }
 //element1
 .element1 {
@@ -56,6 +145,7 @@ body{
         background-color: #a596cb;
         border-radius: 1rem;
         padding: 1rem 2rem;
+        box-shadow: 0px 5px 10px $color-shadow;
     }
 
     &-h2{
@@ -78,6 +168,7 @@ body{
         color: #383a72;
         border-radius: 1rem;
         font-size: 3rem;
+        box-shadow: 0px 5px 10px $color-shadow;
 
         &:first-child{
             margin-right: 4rem;
@@ -90,21 +181,25 @@ body{
         }
     }
 
-    // .enter-player-1-name {
-
-    // }
-    // .enter-player-2-name {
-
-    // }
-
     .start-btn {
         padding: 1rem 2rem;
         background-color: $color-purple-dark;
         color: #fff;
         border-radius: 1rem;
+        box-shadow: 0px 5px 10px $color-shadow;
+
+        &:hover{
+            background-color: $color-purple-dark2;
+        }
     }
 }
-
+.element2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16rem;
+    // background-color: #fff;
+}
 
 
 
@@ -124,6 +219,11 @@ body{
         background-color: $color-purple-dark;
         color: #fff;
         border-radius: 1rem;
+        box-shadow: 0px 5px 10px $color-shadow;
+
+        &:hover{
+            background-color: $color-purple-dark2;
+        }
 
     }
     .store{
@@ -137,6 +237,11 @@ body{
         background-color: $color-purple-light;
         color: #fff;
         border-radius: 1rem;
+        box-shadow: 0px 5px 10px $color-shadow;
+
+        &:hover{
+            background-color: $color-purple-light2;
+        }
     }
 
     .player-icon{
@@ -150,7 +255,6 @@ body{
         width: 50%;
         text-align: center;  
        
-        background-color: aqua;
         border: 2px solid $color-orange-dark;
         border-radius: 1rem;
         
@@ -159,10 +263,12 @@ body{
             font-size: 4rem;
             margin-top: 3rem;
             margin-bottom: 12rem;
+            
         }
 
         &-dice {
             margin-bottom: 20rem ;
+           
         }
 
         &-img {
@@ -170,7 +276,7 @@ body{
         }
 
         &-score {
-            margin-bottom: 1rem;
+            margin-bottom: 1rem;  
         }
 
         &-current-score {
@@ -205,11 +311,23 @@ body{
     .winner{
         font-size: 8rem;
         margin: 10rem 0; 
+        padding: 4rem;
+        border-radius: 3rem;
+        box-shadow: 0px 5px 10px $color-shadow;
+    }
+
+    .winner-name{
+        text-transform: uppercase;
     }
 
     .start-again{
         padding: 1rem 2rem;
         background-color: $color-orange-light;
         border-radius: 1rem;
+        box-shadow: 0px 5px 10px $color-shadow;
+
+        &:hover{
+            background-color: $color-orange-dark;
+        }
     }
 }

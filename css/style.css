@@ -14,6 +14,7 @@ body {
   font-size: 2.6rem;
   width: 100%;
   background-color: #e99869;
+  position: relative;
 }
 
 .container {
@@ -21,6 +22,7 @@ body {
   width: 100%;
   margin: 10rem auto;
   min-height: calc(100vh - 20rem);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
 }
 
 .btn {
@@ -28,6 +30,82 @@ body {
   font-size: 3rem;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.img {
+  width: 20rem;
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+}
+.img-1 {
+  top: -10%;
+  left: 20%;
+  rotate: 50deg;
+}
+.img-2 {
+  top: 20%;
+  left: 80%;
+  rotate: 50deg;
+}
+.img-3 {
+  top: 30%;
+  left: 10%;
+  rotate: 120deg;
+}
+.img-4 {
+  top: 90%;
+  left: 20%;
+}
+.img-5 {
+  top: -20%;
+  left: 60%;
+}
+.img-6 {
+  top: 80%;
+  left: 0;
+  rotate: 100deg;
+}
+.img-7 {
+  top: 85%;
+  left: 80%;
+  rotate: 60deg;
+}
+.img-8 {
+  top: -10%;
+  left: 0%;
+  rotate: 160deg;
+}
+.img-9 {
+  top: -18%;
+  left: 90%;
+  rotate: 140deg;
+}
+.img-10 {
+  top: 7%;
+  left: 5%;
+}
+.img-11 {
+  top: 42%;
+  left: 89%;
+}
+.img-12 {
+  top: 90%;
+  left: 87%;
+}
+.img-13 {
+  top: -25%;
+  left: 38%;
+  rotate: 40deg;
+}
+.img-14 {
+  top: 100%;
+  left: 50%;
+  rotate: 40deg;
+}
+.img-15 {
+  top: 50%;
+  left: 90%;
 }
 
 .element1 {
@@ -46,6 +124,7 @@ body {
   background-color: #a596cb;
   border-radius: 1rem;
   padding: 1rem 2rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
 }
 .element1-h2 {
   margin-bottom: 2rem;
@@ -62,6 +141,7 @@ body {
   color: #383a72;
   border-radius: 1rem;
   font-size: 3rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
 }
 .element1 .enter-player-name:first-child {
   margin-right: 4rem;
@@ -86,6 +166,17 @@ body {
   background-color: #383a72;
   color: #fff;
   border-radius: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+}
+.element1 .start-btn:hover {
+  background-color: #46498e;
+}
+
+.element2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16rem;
 }
 
 .element3 {
@@ -102,6 +193,10 @@ body {
   background-color: #383a72;
   color: #fff;
   border-radius: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+}
+.element3 .roll:hover {
+  background-color: #46498e;
 }
 .element3 .store {
   position: absolute;
@@ -113,6 +208,10 @@ body {
   background-color: #a596cb;
   color: #fff;
   border-radius: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+}
+.element3 .store:hover {
+  background-color: #8d80ad;
 }
 .element3 .player-icon {
   position: absolute;
@@ -122,7 +221,6 @@ body {
 .element3 .player {
   width: 50%;
   text-align: center;
-  background-color: aqua;
   border: 2px solid #ef7c5e;
   border-radius: 1rem;
 }
@@ -162,9 +260,19 @@ body {
 .element4 .winner {
   font-size: 8rem;
   margin: 10rem 0;
+  padding: 4rem;
+  border-radius: 3rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+}
+.element4 .winner-name {
+  text-transform: uppercase;
 }
 .element4 .start-again {
   padding: 1rem 2rem;
   background-color: #e99869;
   border-radius: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+}
+.element4 .start-again:hover {
+  background-color: #ef7c5e;
 }/*# sourceMappingURL=style.css.map */
