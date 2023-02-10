@@ -1,14 +1,14 @@
 //Colors
-$color-orange-dark:#ef7c5e;
-$color-orange-light: #e99869;
-$color-red: #d84a5d;
-$color-purple-light:#a596cb;
-$color-purple-light2:#8d80ad;
-$color-purple-dark:#383a72;
-$color-purple-dark2:#46498e;
-$color-white: #fff;
-$color-shadow: rgba(0, 0, 0, 0.447);
-
+$color-background-body:#071e22;
+$color-background-container:#fff;
+$color-background-active-player:#fff;
+$color-bakground-pasive-player:#f4c095;
+$color-details-dark:#1d7874;
+$color-details-light:#679289;
+$color-details-contrast:#ee2e31;
+$color-background-winner:#f4c095;
+$color-white-text: #fff;
+$color-shadow: #00000072;
 
 //General
 * {
@@ -18,7 +18,7 @@ $color-shadow: rgba(0, 0, 0, 0.447);
 }
 
 html {
-    font-size: 62.5%; //10px
+    font-size: 10px;
     box-sizing: border-box;
    
 }
@@ -26,9 +26,8 @@ body{
     font-family: sans-serif;
     font-size: 2.6rem;
     width: 100%;
-    background-color: $color-orange-light;
-    position: relative;
-    // z-index: -2;
+    background-color: $color-background-body;
+    position: relative; 
 }
 
 .container {
@@ -36,7 +35,7 @@ body{
     width: 100%;
     margin: 10rem auto; 
     min-height: calc(100vh - 20rem);
-    box-shadow: 0px 5px 10px $color-shadow;
+    box-shadow: 0px 0px 10px $color-shadow;
 }
 
 .btn{
@@ -46,64 +45,74 @@ body{
     cursor: pointer;
 
 }
+
 //decoration
 .img{
     width: 20rem;
     position: absolute;
     z-index: -1;
-    box-shadow: 0px 5px 10px $color-shadow;
-
     &-1{
         top: -10%;
         left: 20%;   
         rotate: 50deg;    
     }
+
     &-2{
         top: 20%;
         left: 80%;
         rotate: 50deg; 
     }
+
     &-3{
         top: 30%;
         left: 10%;
         rotate: 120deg; 
     }
+
     &-4{
         top: 90%;
         left: 20%;
     }
+
     &-5{
         top: -20%;
         left: 60%;       
     }
+
     &-6{
         top: 80%;
         left: 0;
         rotate: 100deg;
     }
+
     &-7{
         top: 85%;
         left: 80%;
         rotate: 60deg;
     }
+
     &-8{
         top: -10%;
         left: 0%;
         rotate: 160deg;
     }
+
     &-9{
         top: -18%;
         left: 90%;
         rotate: 140deg;
     }
+
     &-10{
         top: 7%;
         left: 5%;
     }
+
     &-11{
         top:42%;
         left: 89%;
     }
+
     &-12{
         top: 90%;
         left: 87%;
@@ -113,113 +122,102 @@ body{
         left: 38%;
         rotate: 40deg;
     }
+
     &-14{
         top: 100%;
         left: 50%;
         rotate: 40deg;
-
     }
+
     &-15{
         top: 50%;
         left: 90%;
     }
 }
-//element1
-.element1 {
+//Enter players element
+.enter-players-element {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #fff;
-    border-radius: 1rem;
-  
+    background-color: $color-background-container;
 
     &-h1{
         margin-bottom: 8rem;
         text-transform: uppercase;
         font-size: 6rem;
-        background-color: #a596cb;
-        border-radius: 1rem;
+        background-color: $color-details-light;
         padding: 1rem 2rem;
-        box-shadow: 0px 5px 10px $color-shadow;
+        box-shadow: 0px 0px 10px $color-shadow;
     }
 
     &-h2{
         margin-bottom: 2rem;
         text-transform: uppercase;
-        font-size: 2.6rem;
-        
-        
+        font-size: 2.6rem;   
     }
     
     .players-names {
-        margin-bottom: 5rem;
-        
+        margin-bottom: 5rem;  
     }
 
     .enter-player-name {
         height: 5rem;
         width: 30rem;
-        border: 5px solid $color-purple-dark;
-        color: #383a72;
-        border-radius: 1rem;
+        color: $color-details-dark;
         font-size: 3rem;
-        box-shadow: 0px 5px 10px $color-shadow;
+        box-shadow: 0px 0px 10px $color-shadow;
+        padding-left: 1.8rem;
 
         &:first-child{
             margin-right: 4rem;
         }
 
         &::placeholder {
-            font-size: 2.4rem;
-            padding-left: 1.8rem;
+            font-size: 2rem;
             letter-spacing: 4px;
         }
     }
 
     .start-btn {
         padding: 1rem 2rem;
-        background-color: $color-purple-dark;
-        color: #fff;
-        border-radius: 1rem;
-        box-shadow: 0px 5px 10px $color-shadow;
+        background-color: $color-details-dark;
+        color: $color-white-text;
+        box-shadow: 0px 0px 10px $color-shadow;
 
         &:hover{
-            background-color: $color-purple-dark2;
+            box-shadow: 0px 0px 40px 0px $color-details-light;
         }
     }
 }
-.element2 {
+
+//Timer element
+.timer-element {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16rem;
-    // background-color: #fff;
+    background-color: $color-background-container;
 }
 
-
-
-//element3
-.element3 {
+//Game field element 
+.game-field-element {
     position: relative;
     display: flex;
-    border-radius: 3rem;
     
-
     .roll{
         position: absolute;
         top: 65%;
         left: 50%;
         transform: translateX(-50%);
         padding: 1rem 3.4rem;
-        background-color: $color-purple-dark;
-        color: #fff;
-        border-radius: 1rem;
-        box-shadow: 0px 5px 10px $color-shadow;
+        background-color: $color-details-dark;
+        color: $color-white-text;
+        box-shadow: 0px 0px 10px $color-shadow;
 
         &:hover{
-            background-color: $color-purple-dark2;
+            box-shadow: 0px 0px 40px 0px $color-details-light;
         }
 
     }
@@ -228,16 +226,14 @@ body{
         top: 80%;
         left: 50%;
         transform: translateX(-50%);
-
         font-size: 2.4rem;
         padding: 0.8rem 2rem;
-        background-color: $color-purple-light;
-        color: #fff;
-        border-radius: 1rem;
-        box-shadow: 0px 5px 10px $color-shadow;
+        background-color: $color-details-light;
+        color: $color-white-text;
+        box-shadow: 0px 0px 10px $color-shadow;
 
         &:hover{
-            background-color: $color-purple-light2;
+            box-shadow: 0px 0px 40px 0px $color-details-light;
         }
     }
 
@@ -251,21 +247,15 @@ body{
     .player{
         width: 50%;
         text-align: center;  
-       
-        border: 2px solid $color-orange-dark;
-        border-radius: 1rem;
-        
 
         &-name {
             font-size: 4rem;
             margin-top: 3rem;
-            margin-bottom: 12rem;
-            
+            margin-bottom: 12rem;   
         }
 
         &-dice {
-            margin-bottom: 20rem ;
-           
+            margin-bottom: 20rem ;    
         }
 
         &-img {
@@ -281,36 +271,32 @@ body{
         }
     }
     .player1 {    
-        background-color: #fff;
-        // &-score-num {}
-        // &-current-score-num {}
-
+        background-color: $color-background-active-player;
     }
 
     .player2 {   
-        background-color: $color-orange-dark;  
-    //     &-score-num {}
-    //     &-current-score-num {} 
+        background-color: $color-bakground-pasive-player;  
     }
 }
 
-//element4
-.element4 {
+//Display winner element
+.display-winner-element {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    background-color: $color-red;
+    background-color: $color-background-winner;
     height: 100vh;
 
     .winner{
         font-size: 8rem;
         margin: 10rem 0; 
         padding: 4rem;
-        border-radius: 3rem;
-        box-shadow: 0px 5px 10px $color-shadow;
+
+        box-shadow: 0px 0px 10px $color-shadow;
+        background-color: $color-details-contrast;
+        color: $color-white-text;
     }
 
     .winner-name{
@@ -319,12 +305,12 @@ body{
 
     .start-again{
         padding: 1rem 2rem;
-        background-color: $color-orange-light;
-        border-radius: 1rem;
-        box-shadow: 0px 5px 10px $color-shadow;
+        background-color: $color-details-dark;
+        color: $color-white-text;
+        box-shadow: 0px 0px 10px $color-shadow;
 
         &:hover{
-            background-color: $color-orange-dark;
+            box-shadow: 0px 0px 40px 0px $color-details-light;
         }
     }
 }

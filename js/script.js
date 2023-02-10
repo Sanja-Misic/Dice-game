@@ -1,208 +1,198 @@
 "use strict"
-//el1
-const el1 = document.querySelector(".element1");
-const startbtn = document.querySelector(".start-btn");
+//Enter players element
+const enterPlayersElement = document.querySelector(".enter-players-element");
+const startBtn = document.querySelector(".start-btn");
 let enterPlayerName1 = document.querySelector("#player-1-name")
 let enterPlayerName2 = document.querySelector("#player-2-name")
 
-//el2
-const el2 = document.querySelector(".element2");
-const timeNum = document.querySelector(".time-number")
+//Timer element
+const timerElement = document.querySelector(".timer-element");
 const timeImg = document.querySelector(".time-img")
 
-//el3
-const el3 = document.querySelector(".element3");
-
-let player1 = document.querySelector(".player1");
-let player2 = document.querySelector(".player2");
-
-const rollbtn = document.querySelector(".roll");
-const storebtn = document.querySelector(".store");
+//Game field element 
+const gameFieldElement = document.querySelector(".game-field-element");
+let player1Container = document.querySelector(".player1");
+let player2Container = document.querySelector(".player2");
+const rollBtn = document.querySelector(".roll");
+const storeBtn = document.querySelector(".store");
 const playerIcon = document.querySelector(".player-icon")
-
 let dice1 = document.querySelector(".player1-img");
 let dice2 = document.querySelector(".player2-img");
-
-let score1 = document.querySelector(".player1-score-num")
-let score2 = document.querySelector(".player2-score-num")
-
-let curScore1 = document.querySelector(".player1-current-score-num")
-let curScore2 = document.querySelector(".player2-current-score-num")
-
+let score1 = document.querySelector(".player1-score-number")
+let score2 = document.querySelector(".player2-score-number")
+let currentScore1 = document.querySelector(".player1-current-score-number")
+let currentScore2 = document.querySelector(".player2-current-score-number")
 let playerName1 = document.querySelector(".player1-name");
 let playerName2 = document.querySelector(".player2-name");
+let playerNamesNotEnter = document.querySelector(".enter-players-element-h2")
 
-let playerNamesNotEnter = document.querySelector(".element1-h2")
-
-//el4
-const el4 = document.querySelector(".element4");
+//Display winner element
+const displayWinnerElement = document.querySelector(".display-winner-element");
 const winPlayer = document.querySelector(".winner-name")
 const startAgenBtn = document.querySelector(".start-again")
 
-// el1.style.display = "none"
-el2.style.display = "none" 
-el3.style.display = "none" 
-el4.style.display = "none" 
+//Colors
+const colorPasivePlayerBakground = "#f4c095";
+const colorActivePlayerBakground = "#fff";
+const colorPlayerNemesNotEntered = "#ee2e31"
 
-//// el1
-startbtn.addEventListener('click', function() {
-    
+//Other variables
+let currentPlayer = 0;
+let currentScore = 0;
+let score1number = 0;
+let score2number = 0;
+
+////////////////////////////////
+
+////element displays on start game
+timerElement.style.display = "none" 
+gameFieldElement.style.display = "none" 
+displayWinnerElement.style.display = "none" 
+
+// Start button functionality
+const startBtnFunction = () => {
     if(enterPlayerName1.value && enterPlayerName2.value ) {
         playerName1.textContent = enterPlayerName1.value
-        playerName2.textContent = enterPlayerName2.value
-        
-        el1.style.display = "none"
-        el2.style.display = "flex" 
+        playerName2.textContent = enterPlayerName2.value    
+        enterPlayersElement.style.display = "none"
+        timerElement.style.display = "flex" 
+        timerElement.classList.add("active")
 
-        ////el2
-        if (el2.style.display === "flex") {
-            // setTimeout(() => timeNum.textContent = "3", 1000);
+        //timer
+        if (timerElement.classList.contains("active")) {       
             setTimeout(() => timeImg.src = "./img/3.png");
-            
-            // setTimeout(() => timeNum.textContent = "2", 2000);
             setTimeout(() => timeImg.src = "./img/2.png", 1000);
-            
-            // setTimeout(() => timeNum.textContent = "1", 3000);
-            setTimeout(() => timeImg.src= "./img/1.png", 2000);
-            
-        
-            
-            setTimeout(() => el2.style.display = "none" , 3000);
-            setTimeout(() => el3.style.display = "flex" , 3000);
+            setTimeout(() => timeImg.src= "./img/1.png", 2000); 
+            setTimeout(() => timerElement.style.display = "none" , 3000);
+            setTimeout(() => gameFieldElement.style.display = "flex" , 3000);
         }
 
     } else {
         playerNamesNotEnter.textContent ="You didn't enter players names!"
-        playerNamesNotEnter.style.color = "#d84a5d"
-        console.log("You didn't enter player name.") 
-        console.log(el2.style.display === "flex")   
+        playerNamesNotEnter.style.color = colorPlayerNemesNotEntered 
     }
 
     //clean placeholder
-    if (enterPlayerName1.value !="") {
+    if (enterPlayerName1.value !=="") {
         enterPlayerName1.value = ""
-    }
-        
-    if (enterPlayerName2.value !="") {
+    }       
+    if (enterPlayerName2.value !=="") {
         enterPlayerName2.value = ""
     }
-})
+}
 
-////el3
-let curPlayer = 0;
-let curScore = 0;
-let score1num = 0;
-let score2num = 0;
-
+////Game Field Element
 //Roll button
-rollbtn.addEventListener('click', function() {
-    
+const rollBtnFunction = () => {
+    //Get random dice
     let randomDice = Math.floor(Math.random() * 6 + 1)
 
-    //Display dice 
-    if(curPlayer === 0) {
+    //Display random dice 
+    if(currentPlayer === 0) {
         dice1.src = `./img/dice-${randomDice}.png`
     }    
-    else if (curPlayer === 1) {
+    else if (currentPlayer === 1) {
         dice2.src = `./img/dice-${randomDice}.png`       
     }
     
-    //display currScore
+    //Display curent score
     if(randomDice > 1) {
-        curScore += randomDice
+        currentScore += randomDice
 
-        if(curPlayer === 0) {
-            curScore1.textContent = curScore;
+        if(currentPlayer === 0) {
+            currentScore1.textContent = currentScore;
         }
-        else if (curPlayer === 1) {
-            curScore2.textContent = curScore;
+        else if (currentPlayer === 1) {
+            currentScore2.textContent = currentScore;
         }
         
     } else if (randomDice === 1) {
-        curScore = 0
+        currentScore = 0
 
-        if(curPlayer === 0) {
-            curPlayer = 1
-            curScore1.textContent = 0;
-            player2.style.backgroundColor = "white"
-            player1.style.backgroundColor = "#ef7c5e"
+        if(currentPlayer === 0) {
+            currentPlayer = 1
+            currentScore1.textContent = 0;
+            player2Container.style.backgroundColor = colorActivePlayerBakground
+            player1Container.style.backgroundColor = colorPasivePlayerBakground
             playerIcon.style.left = "85%"
         }
-        else if (curPlayer === 1) {
-            curPlayer = 0
-            curScore2.textContent = 0;
-            player1.style.backgroundColor = "white"
-            player2.style.backgroundColor = "#ef7c5e"
+        else if (currentPlayer === 1) {
+            currentPlayer = 0
+            currentScore2.textContent = 0;
+            player1Container.style.backgroundColor = colorActivePlayerBakground
+            player2Container.style.backgroundColor = colorPasivePlayerBakground
             playerIcon.style.left = "35%"
         }
-    }
-})
-// Store score
-storebtn.addEventListener('click', function() {  
-    if(curPlayer === 0) {  
-        score1num += curScore
-        score1.textContent = score1num; 
-        curScore1.textContent = 0;
-   
+    }}
 
-        curPlayer = 1;
-        curScore = 0;
-        player2.style.backgroundColor = "white"
-        player1.style.backgroundColor = "#ef7c5e"
+// Store score
+const storeBtnFunction = () => {
+    if(currentPlayer === 0) {  
+        score1number += currentScore
+        score1.textContent = score1number; 
+        currentScore1.textContent = 0;
+        currentPlayer = 1;
+        currentScore = 0;
+        player2Container.style.backgroundColor = colorActivePlayerBakground
+        player1Container.style.backgroundColor = colorPasivePlayerBakground
         playerIcon.style.left = "85%"
-    
     }
     
-    else if (curPlayer === 1) {
-        score2num += curScore
-        score2.textContent = score2num;
-        curScore2.textContent = 0;    
-    
-        curPlayer = 0;
-        curScore = 0;
-        player1.style.backgroundColor = "white"
-        player2.style.backgroundColor = "#ef7c5e"
+    else if (currentPlayer === 1) {
+        score2number += currentScore
+        score2.textContent = score2number;
+        currentScore2.textContent = 0;       
+        currentPlayer = 0;
+        currentScore = 0;
+        player1Container.style.backgroundColor = colorActivePlayerBakground
+        player2Container.style.backgroundColor = colorPasivePlayerBakground
         playerIcon.style.left = "35%"
     }
     
-    //el4
-    if (score1num >= 50) { 
-        el3.style.display = "none" 
-        el4.style.display = "flex"
+    //displayWinnerElement
+    if (score1number >= 50) { 
+        gameFieldElement.style.display = "none" 
+        displayWinnerElement.style.display = "flex"
         winPlayer.textContent = playerName1.textContent 
     }
     
-    if (score2num >= 50) { 
-        el3.style.display = "none" 
-        el4.style.display = "flex" 
-        winPlayer.textContent = playerName2.textContent 
+    if (score2number >= 50) { 
+        gameFieldElement.style.display = "none"; 
+        displayWinnerElement.style.display = "flex"; 
+        winPlayer.textContent = playerName2.textContent;
     }
-})
+}
 
-///el4
-startAgenBtn.addEventListener('click', function() {
-    el4.style.display = "none" 
-    el1.style.display = "flex"
-
-    curPlayer = 0;
-    curScore = 0;
-    score1num = 0;
-    score2num = 0;
-    curScore1.textContent = 0;
-    curScore2.textContent = 0;
+///RESET - start again btn on Display winner element
+const startAgainFunction = () =>{
+    displayWinnerElement.style.display = "none";
+    enterPlayersElement.style.display = "flex";
+    currentPlayer = 0;
+    currentScore = 0;
+    score1number = 0;
+    score2number = 0;
+    currentScore1.textContent = 0;
+    currentScore2.textContent = 0;
     score1.textContent = 0;
     score2.textContent = 0; 
 
-    playerNamesNotEnter.textContent = "Enter players names"
-    playerNamesNotEnter.style.color = "initial"
+    playerNamesNotEnter.textContent = "Enter players names";
+    playerNamesNotEnter.style.color = "initial";
+    
+    player1Container.style.backgroundColor = colorActivePlayerBakground;
+    player2Container.style.backgroundColor = colorPasivePlayerBakground;
 
-    player1.style.backgroundColor = "white"
-    player2.style.backgroundColor = "#ef7c5e"
+    playerIcon.style.left = "35%"
+}
 
-})
+//active background color depend on current player
+if (currentPlayer === 0) {
+    player1Container.style.backgroundColor = colorActivePlayerBakground;
+} else if (currentPlayer === 1) {
+    player2Container.style.backgroundColor = colorActivePlayerBakground;  
+}
 
-if (curPlayer === 0) {
- player1.style.backgroundColor = "white"
-} else if (curPlayer === 1) {
-    player2.style.backgroundColor = "white"
-   }
+startBtn.addEventListener('click', startBtnFunction);
+rollBtn.addEventListener('click', rollBtnFunction);
+storeBtn.addEventListener('click', storeBtnFunction);
+startAgenBtn.addEventListener('click', startAgainFunction);

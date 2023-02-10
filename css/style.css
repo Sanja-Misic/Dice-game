@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 10px;
   box-sizing: border-box;
 }
 
@@ -13,7 +13,7 @@ body {
   font-family: sans-serif;
   font-size: 2.6rem;
   width: 100%;
-  background-color: #e99869;
+  background-color: #071e22;
   position: relative;
 }
 
@@ -22,7 +22,7 @@ body {
   width: 100%;
   margin: 10rem auto;
   min-height: calc(100vh - 20rem);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4470588235);
 }
 
 .btn {
@@ -36,7 +36,6 @@ body {
   width: 20rem;
   position: absolute;
   z-index: -1;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
 }
 .img-1 {
   top: -10%;
@@ -108,171 +107,157 @@ body {
   left: 90%;
 }
 
-.element1 {
+.enter-players-element {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: #fff;
-  border-radius: 1rem;
 }
-.element1-h1 {
+.enter-players-element-h1 {
   margin-bottom: 8rem;
   text-transform: uppercase;
   font-size: 6rem;
-  background-color: #a596cb;
-  border-radius: 1rem;
+  background-color: #679289;
   padding: 1rem 2rem;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4470588235);
 }
-.element1-h2 {
+.enter-players-element-h2 {
   margin-bottom: 2rem;
   text-transform: uppercase;
   font-size: 2.6rem;
 }
-.element1 .players-names {
+.enter-players-element .players-names {
   margin-bottom: 5rem;
 }
-.element1 .enter-player-name {
+.enter-players-element .enter-player-name {
   height: 5rem;
   width: 30rem;
-  border: 5px solid #383a72;
-  color: #383a72;
-  border-radius: 1rem;
+  color: #1d7874;
   font-size: 3rem;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4470588235);
+  padding-left: 1.8rem;
 }
-.element1 .enter-player-name:first-child {
+.enter-players-element .enter-player-name:first-child {
   margin-right: 4rem;
 }
-.element1 .enter-player-name::-moz-placeholder {
-  font-size: 2.4rem;
-  padding-left: 1.8rem;
+.enter-players-element .enter-player-name::-moz-placeholder {
+  font-size: 2rem;
   letter-spacing: 4px;
 }
-.element1 .enter-player-name:-ms-input-placeholder {
-  font-size: 2.4rem;
-  padding-left: 1.8rem;
+.enter-players-element .enter-player-name::placeholder {
+  font-size: 2rem;
   letter-spacing: 4px;
 }
-.element1 .enter-player-name::placeholder {
-  font-size: 2.4rem;
-  padding-left: 1.8rem;
-  letter-spacing: 4px;
-}
-.element1 .start-btn {
+.enter-players-element .start-btn {
   padding: 1rem 2rem;
-  background-color: #383a72;
+  background-color: #1d7874;
   color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4470588235);
 }
-.element1 .start-btn:hover {
-  background-color: #46498e;
+.enter-players-element .start-btn:hover {
+  box-shadow: 0px 0px 40px 0px #679289;
 }
 
-.element2 {
+.timer-element {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16rem;
+  background-color: #fff;
 }
 
-.element3 {
+.game-field-element {
   position: relative;
   display: flex;
-  border-radius: 3rem;
 }
-.element3 .roll {
+.game-field-element .roll {
   position: absolute;
   top: 65%;
   left: 50%;
   transform: translateX(-50%);
   padding: 1rem 3.4rem;
-  background-color: #383a72;
+  background-color: #1d7874;
   color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4470588235);
 }
-.element3 .roll:hover {
-  background-color: #46498e;
+.game-field-element .roll:hover {
+  box-shadow: 0px 0px 40px 0px #679289;
 }
-.element3 .store {
+.game-field-element .store {
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2.4rem;
   padding: 0.8rem 2rem;
-  background-color: #a596cb;
+  background-color: #679289;
   color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4470588235);
 }
-.element3 .store:hover {
-  background-color: #8d80ad;
+.game-field-element .store:hover {
+  box-shadow: 0px 0px 40px 0px #679289;
 }
-.element3 .player-icon {
+.game-field-element .player-icon {
   position: absolute;
   top: 4rem;
   left: 35%;
 }
-.element3 .player {
+.game-field-element .player {
   width: 50%;
   text-align: center;
-  border: 2px solid #ef7c5e;
-  border-radius: 1rem;
 }
-.element3 .player-name {
+.game-field-element .player-name {
   font-size: 4rem;
   margin-top: 3rem;
   margin-bottom: 12rem;
 }
-.element3 .player-dice {
+.game-field-element .player-dice {
   margin-bottom: 20rem;
 }
-.element3 .player-img {
+.game-field-element .player-img {
   width: 10rem;
 }
-.element3 .player-score {
+.game-field-element .player-score {
   margin-bottom: 1rem;
 }
-.element3 .player-current-score {
+.game-field-element .player-current-score {
   font-weight: bold;
 }
-.element3 .player1 {
+.game-field-element .player1 {
   background-color: #fff;
 }
-.element3 .player2 {
-  background-color: #ef7c5e;
+.game-field-element .player2 {
+  background-color: #f4c095;
 }
 
-.element4 {
+.display-winner-element {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #d84a5d;
+  background-color: #f4c095;
   height: 100vh;
 }
-.element4 .winner {
+.display-winner-element .winner {
   font-size: 8rem;
   margin: 10rem 0;
   padding: 4rem;
-  border-radius: 3rem;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4470588235);
+  background-color: #ee2e31;
+  color: #fff;
 }
-.element4 .winner-name {
+.display-winner-element .winner-name {
   text-transform: uppercase;
 }
-.element4 .start-again {
+.display-winner-element .start-again {
   padding: 1rem 2rem;
-  background-color: #e99869;
-  border-radius: 1rem;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.447);
+  background-color: #1d7874;
+  color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4470588235);
 }
-.element4 .start-again:hover {
-  background-color: #ef7c5e;
+.display-winner-element .start-again:hover {
+  box-shadow: 0px 0px 40px 0px #679289;
 }/*# sourceMappingURL=style.css.map */
