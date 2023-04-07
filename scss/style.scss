@@ -1,316 +1,315 @@
 //Colors
-$color-background-body:#071e22;
-$color-background-container:#fff;
-$color-background-active-player:#fff;
-$color-bakground-pasive-player:#f4c095;
-$color-details-dark:#1d7874;
-$color-details-light:#679289;
-$color-details-contrast:#ee2e31;
-$color-background-winner:#f4c095;
+$color-background-body: #071e22;
+$color-background-container: #fff;
+$color-background-active-player: #fff;
+$color-bakground-pasive-player: #f4c095;
+$color-details-dark: #1d7874;
+$color-details-light: #679289;
+$color-details-contrast: #ee2e31;
+$color-background-winner: #f4c095;
 $color-white-text: #fff;
 $color-shadow: #00000072;
 
 //General
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 10px;
-    box-sizing: border-box;
-   
+  font-size: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-body{ 
-    font-family: sans-serif;
-    font-size: 2.6rem;
-    width: 100%;
-    background-color: $color-background-body;
-    position: relative; 
+body {
+  font-family: sans-serif;
+  font-size: 2.6rem;
+  width: 100%;
+  background-color: $color-background-body;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .container {
-    max-width: 120rem;
-    width: 100%;
-    margin: 10rem auto; 
-    min-height: calc(100vh - 20rem);
-    box-shadow: 0px 0px 10px $color-shadow;
+  max-width: 120rem;
+  width: 100%;
+  margin: 10rem auto;
+  min-height: calc(100vh - 20rem);
+  box-shadow: 0px 0px 10px $color-shadow;
 }
 
-.btn{
-    border: none;
-    font-size: 3rem;
-    text-transform: uppercase;
-    cursor: pointer;
-
+.btn {
+  border: none;
+  font-size: 3rem;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 //decoration
-.img{
-    width: 20rem;
-    position: absolute;
-    z-index: -1;
-    &-1{
-        top: -10%;
-        left: 20%;   
-        rotate: 50deg;    
-    }
+.img {
+  width: 20rem;
+  position: absolute;
+  z-index: -1;
+  &-1 {
+    top: -10%;
+    left: 20%;
+    rotate: 50deg;
+  }
 
-    &-2{
-        top: 20%;
-        left: 80%;
-        rotate: 50deg; 
-    }
+  &-2 {
+    top: 20%;
+    left: 80%;
+    rotate: 50deg;
+  }
 
-    &-3{
-        top: 30%;
-        left: 10%;
-        rotate: 120deg; 
-    }
+  &-3 {
+    top: 30%;
+    left: 10%;
+    rotate: 120deg;
+  }
 
-    &-4{
-        top: 90%;
-        left: 20%;
-    }
+  &-4 {
+    top: 90%;
+    left: 20%;
+  }
 
-    &-5{
-        top: -20%;
-        left: 60%;       
-    }
+  &-5 {
+    top: -20%;
+    left: 60%;
+  }
 
-    &-6{
-        top: 80%;
-        left: 0;
-        rotate: 100deg;
-    }
+  &-6 {
+    top: 80%;
+    left: 0;
+    rotate: 100deg;
+  }
 
-    &-7{
-        top: 85%;
-        left: 80%;
-        rotate: 60deg;
-    }
+  &-7 {
+    top: 85%;
+    left: 80%;
+    rotate: 60deg;
+  }
 
-    &-8{
-        top: -10%;
-        left: 0%;
-        rotate: 160deg;
-    }
+  &-8 {
+    top: -10%;
+    left: 0%;
+    rotate: 160deg;
+  }
 
-    &-9{
-        top: -18%;
-        left: 90%;
-        rotate: 140deg;
-    }
+  &-9 {
+    top: -18%;
+    left: 90%;
+    rotate: 140deg;
+  }
 
-    &-10{
-        top: 7%;
-        left: 5%;
-    }
+  &-10 {
+    top: 7%;
+    left: 5%;
+  }
 
-    &-11{
-        top:42%;
-        left: 89%;
-    }
+  &-11 {
+    top: 42%;
+    left: 89%;
+  }
 
-    &-12{
-        top: 90%;
-        left: 87%;
-    }
-    &-13{
-        top: -25%;
-        left: 38%;
-        rotate: 40deg;
-    }
+  &-12 {
+    top: 90%;
+    left: 87%;
+  }
+  &-13 {
+    top: -25%;
+    left: 38%;
+    rotate: 40deg;
+  }
 
-    &-14{
-        top: 100%;
-        left: 50%;
-        rotate: 40deg;
-    }
+  &-14 {
+    top: 100%;
+    left: 50%;
+    rotate: 40deg;
+  }
 
-    &-15{
-        top: 50%;
-        left: 90%;
-    }
+  &-15 {
+    top: 50%;
+    left: 90%;
+  }
 }
 //Enter players element
 .enter-players-element {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: $color-background-container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $color-background-container;
 
-    &-h1{
-        margin-bottom: 8rem;
-        text-transform: uppercase;
-        font-size: 6rem;
-        background-color: $color-details-light;
-        padding: 1rem 2rem;
-        box-shadow: 0px 0px 10px $color-shadow;
+  &-h1 {
+    margin-bottom: 8rem;
+    text-transform: uppercase;
+    font-size: 6rem;
+    background-color: $color-details-light;
+    padding: 1rem 2rem;
+    box-shadow: 0px 0px 10px $color-shadow;
+  }
+
+  &-h2 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 2.6rem;
+  }
+
+  .players-names {
+    margin-bottom: 5rem;
+  }
+
+  .enter-player-name {
+    height: 5rem;
+    width: 30rem;
+    color: $color-details-dark;
+    font-size: 3rem;
+    box-shadow: 0px 0px 10px $color-shadow;
+    padding-left: 1.8rem;
+
+    &:first-child {
+      margin-right: 4rem;
     }
 
-    &-h2{
-        margin-bottom: 2rem;
-        text-transform: uppercase;
-        font-size: 2.6rem;   
+    &::placeholder {
+      font-size: 2rem;
+      letter-spacing: 4px;
     }
-    
-    .players-names {
-        margin-bottom: 5rem;  
+  }
+
+  .start-btn {
+    padding: 1rem 2rem;
+    background-color: $color-details-dark;
+    color: $color-white-text;
+    box-shadow: 0px 0px 10px $color-shadow;
+
+    &:hover {
+      box-shadow: 0px 0px 40px 0px $color-details-light;
     }
-
-    .enter-player-name {
-        height: 5rem;
-        width: 30rem;
-        color: $color-details-dark;
-        font-size: 3rem;
-        box-shadow: 0px 0px 10px $color-shadow;
-        padding-left: 1.8rem;
-
-        &:first-child{
-            margin-right: 4rem;
-        }
-
-        &::placeholder {
-            font-size: 2rem;
-            letter-spacing: 4px;
-        }
-    }
-
-    .start-btn {
-        padding: 1rem 2rem;
-        background-color: $color-details-dark;
-        color: $color-white-text;
-        box-shadow: 0px 0px 10px $color-shadow;
-
-        &:hover{
-            box-shadow: 0px 0px 40px 0px $color-details-light;
-        }
-    }
+  }
 }
 
 //Timer element
 .timer-element {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16rem;
-    background-color: $color-background-container;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16rem;
+  background-color: $color-background-container;
 }
 
-//Game field element 
+//Game field element
 .game-field-element {
-    position: relative;
-    display: flex;
-    
-    .roll{
-        position: absolute;
-        top: 65%;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 1rem 3.4rem;
-        background-color: $color-details-dark;
-        color: $color-white-text;
-        box-shadow: 0px 0px 10px $color-shadow;
+  position: relative;
+  display: flex;
 
-        &:hover{
-            box-shadow: 0px 0px 40px 0px $color-details-light;
-        }
+  .roll {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 3.4rem;
+    background-color: $color-details-dark;
+    color: $color-white-text;
+    box-shadow: 0px 0px 10px $color-shadow;
 
+    &:hover {
+      box-shadow: 0px 0px 40px 0px $color-details-light;
     }
-    .store{
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 2.4rem;
-        padding: 0.8rem 2rem;
-        background-color: $color-details-light;
-        color: $color-white-text;
-        box-shadow: 0px 0px 10px $color-shadow;
+  }
+  .store {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.4rem;
+    padding: 0.8rem 2rem;
+    background-color: $color-details-light;
+    color: $color-white-text;
+    box-shadow: 0px 0px 10px $color-shadow;
 
-        &:hover{
-            box-shadow: 0px 0px 40px 0px $color-details-light;
-        }
+    &:hover {
+      box-shadow: 0px 0px 40px 0px $color-details-light;
     }
+  }
 
-    .player-icon{
-        position: absolute;
-        top: 4rem;
-        left: 35%
-        // left: 85%
-    }
+  .player-icon {
+    position: absolute;
+    top: 4rem;
+    left: 35%;
+    // left: 85%
+  }
 
-    .player{
-        width: 50%;
-        text-align: center;  
+  .player {
+    width: 50%;
+    text-align: center;
 
-        &-name {
-            font-size: 4rem;
-            margin-top: 3rem;
-            margin-bottom: 12rem;   
-        }
-
-        &-dice {
-            margin-bottom: 20rem ;    
-        }
-
-        &-img {
-            width: 10rem;
-        }
-
-        &-score {
-            margin-bottom: 1rem;  
-        }
-
-        &-current-score {
-            font-weight: bold;
-        }
-    }
-    .player1 {    
-        background-color: $color-background-active-player;
+    &-name {
+      font-size: 4rem;
+      margin-top: 3rem;
+      margin-bottom: 12rem;
     }
 
-    .player2 {   
-        background-color: $color-bakground-pasive-player;  
+    &-dice {
+      margin-bottom: 20rem;
     }
+
+    &-img {
+      width: 10rem;
+    }
+
+    &-score {
+      margin-bottom: 1rem;
+    }
+
+    &-current-score {
+      font-weight: bold;
+    }
+  }
+  .player1 {
+    background-color: $color-background-active-player;
+  }
+
+  .player2 {
+    background-color: $color-bakground-pasive-player;
+  }
 }
 
 //Display winner element
 .display-winner-element {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: $color-background-winner;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $color-background-winner;
+  height: 100vh;
 
-    .winner{
-        font-size: 8rem;
-        margin: 10rem 0; 
-        padding: 4rem;
+  .winner {
+    font-size: 8rem;
+    margin: 10rem 0;
+    padding: 4rem;
 
-        box-shadow: 0px 0px 10px $color-shadow;
-        background-color: $color-details-contrast;
-        color: $color-white-text;
+    box-shadow: 0px 0px 10px $color-shadow;
+    background-color: $color-details-contrast;
+    color: $color-white-text;
+  }
+
+  .winner-name {
+    text-transform: uppercase;
+  }
+
+  .start-again {
+    padding: 1rem 2rem;
+    background-color: $color-details-dark;
+    color: $color-white-text;
+    box-shadow: 0px 0px 10px $color-shadow;
+
+    &:hover {
+      box-shadow: 0px 0px 40px 0px $color-details-light;
     }
-
-    .winner-name{
-        text-transform: uppercase;
-    }
-
-    .start-again{
-        padding: 1rem 2rem;
-        background-color: $color-details-dark;
-        color: $color-white-text;
-        box-shadow: 0px 0px 10px $color-shadow;
-
-        &:hover{
-            box-shadow: 0px 0px 40px 0px $color-details-light;
-        }
-    }
+  }
 }
