@@ -1,5 +1,5 @@
 //Colors
-$color-background-body: #071e22;
+$color-background-body: #72bfcd;
 $color-background-container: #fff;
 $color-background-active-player: #fff;
 $color-bakground-pasive-player: #f4c095;
@@ -20,7 +20,7 @@ $color-shadow: #00000072;
 html {
   font-size: 10px;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 body {
   font-family: sans-serif;
@@ -28,7 +28,7 @@ body {
   width: 100%;
   background-color: $color-background-body;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
